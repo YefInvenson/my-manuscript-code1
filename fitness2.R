@@ -1007,8 +1007,8 @@ for(i in 1:dim(ff)[1]){
   niche[i,5]=(ff[i,5]+ff[i,7])*(ff[i,6]+ff[i,7])
   niche[i,6]=(ff[i,8]+ff[i,10])*(ff[i,9]+ff[i,10])
   #xy轴的方向
-  niche[i,7]=-dudy[i]
-  niche[i,8]=-dvdx[i]
+  niche[i,7]=(ff[i,5]+ff[i,7])*(ff[i,6]+ff[i,7])
+  niche[i,8]=(ff[i,8]+ff[i,10])*(ff[i,9]+ff[i,10])
   #t轴的方向
   niche[i,9]=niche[i,5]+niche[i,6]
 }
@@ -2089,3 +2089,4 @@ ggplot(data = ttt,
                 vlcex = 1.2, vlabels = colnames(pic),
                 caxislabels = c(-1.0, " ",0.0," ", 1.0)
   )
+
